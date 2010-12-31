@@ -1,0 +1,26 @@
+.messagebar-skin-vista_bar {
+  color: #FFFFFF;
+  height:40px;
+  margin: 0 auto;
+  display: none;
+  background: url(bar.png) bottom left repeat-x transparent;
+  opacity: 0.8;
+}
+
+.messagebar-skin-vista_text {
+    font:bold 12px/40px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-vista_close {
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(close.png) top left no-repeat;
+}
+
+.messagebar-skin-vista_close:hover{
+  background-position: bottom left;
+}

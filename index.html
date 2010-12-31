@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+<title>MessageBar - Show your messages the right way.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.messagebar.js"></script>
+<link rel="stylesheet" type="text/css" href="skins/plain/skin.css" />
+<link rel="stylesheet" type="text/css" href="skins/ff/skin.css" />
+<link rel="stylesheet" type="text/css" href="skins/custom/skin.css" />
+<link rel="stylesheet" type="text/css" href="skins/vista/skin.css" />
+</head>
+<body>
+<div id="message_bar"><!-- The content will be dynamically loaded in here --></div>
+<div id="result"><!-- The content will be dynamically loaded in here --></div>
+<div id="header">
+<h1>Message Bar</h1>
+<h2>jQuery Plugin</h2>
+</div>
+<div class="content round">
+  <h3>Description:</h3>
+  <p>This is a jQuery plugin, showing a message bar at the top of a the page. It can be used to show validation errors, success messages and overall info.</p>
+  <p>Skins Demo:</p>
+  <p>
+    <a class="ff" href="#">FF</a> |
+    <a class="custom" href="#">Custom</a> |
+    <a class="vista" href="#">Vista</a> |
+    <a class="black" href="#">Black</a>
+  </p>
+  <p>Positions Demo:</p>
+  <p>
+    <a class="relative" href="#">Relative</a> |
+    <a class="fixed" href="#">Fixed</a> |
+    <a class="absolute" href="#">Absolute</a>
+  </p>
+</div>
+
+<div class="content round">
+<h3>Usage:</h3>
+<p>
+<pre>
+
+...<br />
+&lt;body&gt;<br />
+&lt;div id="message_bar"&gt;&lt;!-- content --&gt;&lt;/div&gt;<br />
+...
+
+&lt;script type="text/javascript"&gt;
+$(document).ready(function() {
+
+      $('.modern').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          message       : 'Error message',
+          background    : '#111111',
+          color         : '#FFFFFF',
+          speed         : 'fast',
+          skin          : 'plain',
+          position      : fixed,
+          autohide      : false,
+        });
+     });
+});
+
+&lt;/script&gt;
+
+</pre>
+</p>
+</div>
+
+<div class="content round">
+<h3>Version Info:</h3>
+<p>
+Current version: 0.8<br />
+Compressed filesize: 2 050 bytes<br />
+License: MIT/GPL<br />
+</p>
+</div>
+
+<div class="content round">
+<h3>Download:</h3>
+<p>
+<a href="http://www.andreyvoev.com/playground/jquery/messagebar/messagebar.zip" target="_blank">Download Link</a>
+</p>
+</div>
+
+<div id="footer">
+</div>
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('.ff').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          color : 'white',
+          skin : 'ff',
+          background: '#d3daed'
+        });
+     });
+
+     $('.custom').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          color : 'white',
+          skin : 'custom',
+          background: '#2c6f15'
+        });
+     });
+
+     $('.vista').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          color : 'white',
+          skin : 'vista'
+        });
+     });
+
+      $('.black').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          color : 'white',
+          skin : 'black',
+          background: '#111111'
+        });
+     });
+
+     $('.fixed').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          position: 'fixed',
+          skin : 'modern'
+        });
+     });
+
+     $('.relative').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          position: 'relative',
+          skin : 'modern'
+        });
+     });
+
+     $('.absolute').click(function(event){
+        event.preventDefault();
+        $('#message_bar').displayMessage({
+          position: 'absolute',
+          skin : 'modern'
+        });
+     });
+
+     $('.ajax').click(function(event){
+        event.preventDefault();
+             $('#result').load('ajax.php', function() {
+                $('#message_bar').displayMessage({
+                  color : 'white',
+                  skin : 'modern',
+                  message : 'Load was performed.'
+                });
+            });
+     });
+});
+</script>
+</body>
+</html>

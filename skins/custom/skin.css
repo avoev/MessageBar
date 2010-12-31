@@ -1,0 +1,26 @@
+.messagebar-skin-custom_bar {
+  color: #FFFFFF;
+  height:40px;
+  margin: 0 auto;
+  display: none;
+  width: 100%;
+  background: url(bar.png) top left repeat-x;
+}
+
+.messagebar-skin-custom_text {
+    font:bold 12px/40px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-custom_close {
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 9px;
+    background: url(close.png) top left no-repeat;
+}
+
+.messagebar-skin-custom_close:hover{
+  background-position: bottom left;
+}

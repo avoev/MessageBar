@@ -1,0 +1,7 @@
+MessageBar - Show messages with jQuery
+
+MessageBar is a jQuery plugin for showing a horizontal messages on the top of your page.
+It supports a lot of customizations, and you can use it for showing error or success messages without
+the need of setting your site your site with permanent ones.
+
+See index.html for documentation and examples.

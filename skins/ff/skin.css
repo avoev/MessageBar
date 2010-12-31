@@ -1,0 +1,35 @@
+.messagebar-skin-ff_bar {
+  color: #FFFFFF;
+  height:30px;
+  margin: 0 auto;
+  width:98%;
+  display: none;
+  background: url(bar.png) top left repeat-x #d3daed;
+  border: 1px solid #afb7cf;
+  border-top: none;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position:absolute;
+  left: 50%;
+  margin-left: -49%;
+}
+
+.messagebar-skin-ff_text {
+    font:bold 12px/30px Tahoma,Arial,Helvetica,sans-serif;
+    text-shadow:1px 1px 1px #333333;
+    padding-left:9px;
+}
+
+.messagebar-skin-ff_close {
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 4px;
+    background: url(close.png) top left no-repeat;
+}
+
+.messagebar-skin-ff_close:hover{
+  background-position: bottom left;
+}
